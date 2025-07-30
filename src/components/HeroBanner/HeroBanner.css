@@ -1,0 +1,33 @@
+.hero-banner {
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  margin-left: 60px;
+  border-radius: 10px;
+}
+
+.hero-buttons button {
+  margin-right: 15px;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.play {
+  background-color: white;
+  color: black;
+}
+
+.info {
+  background-color: gray;
+  color: white;
+}
