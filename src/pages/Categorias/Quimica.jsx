@@ -1,5 +1,5 @@
 import React from 'react';
-import HeroBanner from '../../components/HeroBanner/HeroBanner';
+import HeroBanner from '../../components/HeroBanner/HeroBannerQuimica';
 import TitleCards from '../../components/TitleCards/TitleCards';
 import bannerImg from '../../assets/bannerQuimica.jpg'; 
 
