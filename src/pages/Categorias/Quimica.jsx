@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroBanner from '../../components/HeroBanner/HeroBanner';
 import TitleCards from '../../components/TitleCards/TitleCards';
-import bannerImg from '../../assets/quimica-banner.jpg'; // tu imagen destacada
+import bannerImg from '../../assets/bannerQuimica.jpg'; 
 
 const Quimica = () => {
   return (
