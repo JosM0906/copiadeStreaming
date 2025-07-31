@@ -1,30 +1,38 @@
 .hero-banner {
+  position: relative;
   width: 100%;
   height: 85vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: flex-end;
   padding: 60px;
 }
 
-.overlay {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 30px 40px;
-  border-radius: 10px;
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.4);
+}
+
+/* Contenido principal (izquierda) */
+.overlay-content {
+  z-index: 2;
   max-width: 600px;
-  color: #fff;
+  color: white;
 }
 
-.overlay h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.overlay-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
 }
 
-.overlay p {
-  font-size: 1rem;
+.overlay-content p {
+  font-size: 1.1rem;
   margin-bottom: 20px;
 }
 
@@ -33,22 +41,47 @@
   gap: 10px;
 }
 
-.buttons .play {
-  padding: 10px 20px;
-  background-color: white;
-  color: black;
+.buttons button {
+  padding: 10px 24px;
+  font-size: 16px;
   font-weight: bold;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s;
 }
 
-.buttons .info {
-  padding: 10px 20px;
-  background-color: rgba(109, 109, 110, 0.7);
+.play {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+.info {
+  background-color: rgba(109, 109, 110, 0.6);
   color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
+}
+
+/* Botón de sonido en esquina inferior derecha */
+.sound-toggle {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.sound-toggle button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  color: white;
+  font-size: 22px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sound-toggle button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
 }
