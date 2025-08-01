@@ -2,11 +2,12 @@ import React, { useRef, useState } from 'react';
 import './HeroBanner.css';
 import videoBg from '../../assets/La Quimica y la vida.mp4';
 import { useNavigate } from 'react-router-dom';
+import Modal from '../../pages/Modal/Modal';
 
 const HeroBannerQuimica = () => {
   const videoRef = useRef(null);
   const [muted, setMuted] = useState(true);
-  const [showModal, setShowModal] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
 
   const toggleSound = () => {
@@ -17,11 +18,11 @@ const HeroBannerQuimica = () => {
   };
 
   const handlePlay = () => {
-    navigate('/video-quimica'); // ruta interna, no al archivo mp4
+    navigate('/video-quimica');
   };
 
   const handleMoreInfo = () => {
-    setShowModal(true);
+    setIsModalOpen(true);
   };
 
   return (
@@ -36,7 +37,6 @@ const HeroBannerQuimica = () => {
         className="video-bg"
       />
 
-      {/* Contenido principal izquierdo */}
       <div className="overlay-content">
         <h1>Química en la vida diaria</h1>
         <p>Descubre cómo reacciones químicas ocurren en tu entorno.</p>
@@ -46,27 +46,14 @@ const HeroBannerQuimica = () => {
         </div>
       </div>
 
-      {/* Botón de sonido */}
       <div className="sound-toggle">
         <button onClick={toggleSound}>
           {muted ? '🔇' : '🔊'}
         </button>
       </div>
 
-      {/* Modal emergente */}
-      {showModal && (
-        <div className="modal-overlay">
-          <div className="modal">
-            <button className="close" onClick={() => setShowModal(false)}>✖</button>
-            <h2>¿Qué es la química en la vida diaria?</h2>
-            <p>
-              La química está presente en cada aspecto de nuestra vida:
-              desde la digestión hasta la limpieza. Este contenido te
-              mostrará cómo reacciones comunes nos rodean a diario.
-            </p>
-          </div>
-        </div>
-      )}
+      {/* Mostrar Modal */}
+      {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
     </div>
   );
 };
