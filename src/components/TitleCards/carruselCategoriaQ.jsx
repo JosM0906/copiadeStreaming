@@ -5,9 +5,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
 
-const CarruselCategoriaQ = ({ titulo, items }) => {
+const CarruselCategoriaQ = ({ titulo, items, onVideoClick }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [expandedIndex, setExpandedIndex] = useState(null); // ✅ NECESARIO
+  const [expandedIndex, setExpandedIndex] = useState(null);
 
   return (
     <div className="categoria-carrusel">
@@ -38,12 +38,19 @@ const CarruselCategoriaQ = ({ titulo, items }) => {
 
               <div className="video-overlay">
                 <div className="button-row">
-                  <button className="btn play">▶</button>
+                  <button
+                    className="btn play"
+                    onClick={() => onVideoClick && onVideoClick(item)}
+                  >
+                    ▶
+                  </button>
                   <button className="btn">✓</button>
                   <button className="btn">👍</button>
                   <button
                     className="btn arrow"
-                    onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+                    onClick={() =>
+                      setExpandedIndex(expandedIndex === index ? null : index)
+                    }
                   >
                     ⌄
                   </button>
@@ -63,9 +70,17 @@ const CarruselCategoriaQ = ({ titulo, items }) => {
 
                 {expandedIndex === index && (
                   <div className="expand-info">
-                    <p><strong>Descripción:</strong> Este experimento te enseña cómo reacciones químicas simples pueden generar efectos sorprendentes como burbujas inflamables.</p>
-                    <p><strong>Duración:</strong> 2 minutos</p>
-                    <p><strong>Clasificación:</strong> Apto para todo público</p>
+                    <p>
+                      <strong>Descripción:</strong> Este experimento te enseña
+                      cómo reacciones químicas simples pueden generar efectos
+                      sorprendentes como burbujas inflamables.
+                    </p>
+                    <p>
+                      <strong>Duración:</strong> 2 minutos
+                    </p>
+                    <p>
+                      <strong>Clasificación:</strong> Apto para todo público
+                    </p>
                   </div>
                 )}
               </div>
