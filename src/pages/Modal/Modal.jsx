@@ -1,5 +1,4 @@
 import './Modal.css';
-import { useNavigate } from 'react-router-dom';
 import poster from '../../assets/bannerQuimica.jpg';
 
 const Modal = ({ onClose }) => {
