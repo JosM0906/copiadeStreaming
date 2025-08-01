@@ -1,0 +1,211 @@
+.card-video {
+  position: relative;
+  width: 50%;
+  transition: transform 0.3s ease, z-index 0.3s;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.card-video:hover {
+  transform: scale(1.3) translate(10%, -20%);
+  z-index: 10;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Envoltura con proporción 16:9 */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-wrapper iframe,
+.video-wrapper .thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+  display: block;
+}
+
+/* Información inferior */
+.card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  padding: 0.6rem 0.8rem;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 20;
+  color: white;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.card-video.hovered .card-info {
+  opacity: 1;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.card-buttons .btn {
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.4); /* borde blanco semitransparente */
+  color: white;
+  font-size: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-buttons .btn:hover {
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.video-title {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.swiper-slide {
+  position: relative;
+  height: auto;
+  overflow: visible !important;
+}
+
+.swiper {
+  overflow: visible !important;
+}
+
+.categoria-carrusel {
+  margin: 2rem 0;
+  padding: 0 2rem;
+  color: white;
+}
+
+.card-video {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 320px;
+  background-color: black;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 180px;
+  border: none;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Zona negra debajo del video */
+.video-overlay {
+  background-color: #141414;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Botones estilo Netflix */
+.button-row {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Botón de reproducción especial */
+.btn.play {
+  background: white;
+  color: black;
+  border: none;
+}
+
+.video-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* Barra de progreso */
+.progress-bar {
+  background: rgba(255, 255, 255, 0.2);
+  height: 4px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress {
+  background: red;
+  height: 100%;
+  width: 0%; /* se actualiza dinámicamente */
+}
+
+.button-row .btn.arrow {
+  margin-left: auto;
+}
+
+/*VENTANA EMERGENTE DE CADA VIDEO*/
+.expand-info {
+  background-color: #141414;
+  color: white;
+  padding: 1rem;
+  font-size: 14px;
+  border-radius: 0 0 8px 8px;
+  animation: fadeIn 0.3s ease-in-out;
+  margin-top: -4px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

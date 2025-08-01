@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import Quimica from './pages/Categorias/Quimica';
 import VideoQuimica from './pages/Categorias/videoquimica';
+import Modal from './pages/Modal/Modal';
 
 const App = () => {
   return (
