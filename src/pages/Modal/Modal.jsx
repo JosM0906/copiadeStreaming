@@ -1,4 +1,5 @@
 import './Modal.css';
+import { useNavigate } from 'react-router-dom';
 import poster from '../../assets/bannerQuimica.jpg';
 
 const Modal = ({ onClose }) => {
@@ -20,9 +21,13 @@ const Modal = ({ onClose }) => {
             <h2 className="modal-title">Química en la vida diaria</h2>
 
             <div className="modal-buttons">
-              <button className="btn play" onClick={handlePlay}>▶ </button>
+              <button className="btn play" onClick={handlePlay}>
+                <span className="play-icon">▶</span>
+                <span className="play-text">Reproducir</span>
+              </button>
+
               <button className="btn circle">＋</button>
-              <button className="btn circle">⬇</button>
+              <button className="btn circle"onClick={handlePlay}>⬇</button>
             </div>
 
             <div className="modal-tags">

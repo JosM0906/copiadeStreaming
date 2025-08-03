@@ -6,6 +6,7 @@
   display: flex;
   align-items: flex-end;
   padding: 60px;
+  z-index: 1;
 }
 
 .video-bg {
@@ -48,7 +49,7 @@
   font-size: 16px;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 1px;
   cursor: pointer;
   backdrop-filter: blur(5px);
   transition: background-color 0.3s;

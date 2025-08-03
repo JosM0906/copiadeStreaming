@@ -1,211 +1,161 @@
-.card-video {
+.categoria-carrusel {
+  padding: 1.5rem;
+  background-color: #141414;
+  color: white;
   position: relative;
-  width: 50%;
-  transition: transform 0.3s ease, z-index 0.3s;
   z-index: 1;
-  border-radius: 10px;
 }
 
-.card-video:hover {
-  transform: scale(1.3) translate(10%, -20%);
-  z-index: 10;
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.5);
+.categoria-carrusel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-/* Envoltura con proporción 16:9 */
-.video-wrapper {
+.card-netflix-container {
   position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 aspect ratio */
-  border-radius: 10px;
-  overflow: hidden;
+  margin: 10px;
+  overflow: visible;
 }
 
-.video-wrapper iframe,
-.video-wrapper .thumbnail {
-  position: absolute;
-  top: 0;
-  left: 0;
+.thumbnail {
   width: 100%;
-  height: 100%;
-  border: none;
+  height: 160px;
   object-fit: cover;
-  display: block;
+  border-radius: 6px;
 }
 
-/* Información inferior */
-.card-info {
+.titulo-overlay {
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 90%;
-  padding: 0.6rem 0.8rem;
-  background: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 20;
+  width: 100%;
+  padding: 0.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
   color: white;
-  border-radius: 0 0 10px 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.card-video.hovered .card-info {
-  opacity: 1;
-}
-
-.card-buttons {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.card-buttons .btn {
-  width: 36px;
-  height: 36px;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.4); /* borde blanco semitransparente */
-  color: white;
-  font-size: 1rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.card-buttons .btn:hover {
-  border: 2px solid white;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-}
-
-.video-title {
   font-size: 0.85rem;
   font-weight: 500;
-  margin: 0;
 }
 
-.swiper-slide {
-  position: relative;
-  height: auto;
-  overflow: visible !important;
-}
-
-.swiper {
-  overflow: visible !important;
-}
-
-.categoria-carrusel {
-  margin: 2rem 0;
-  padding: 0 2rem;
-  color: white;
-}
-
-.card-video {
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
+.hover-card {
+  position: absolute;
+  top: -280px;
+  left: 0;
   width: 320px;
-  background-color: black;
-}
-
-.video-container iframe {
-  width: 100%;
-  height: 180px;
-  border: none;
-  border-radius: 8px 8px 0 0;
-}
-
-/* Zona negra debajo del video */
-.video-overlay {
-  background-color: #141414;
-  padding: 10px;
-  color: white;
-  font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-/* Botones estilo Netflix */
-.button-row {
-  display: flex;
-  gap: 12px;
-}
-
-.btn {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  background: transparent;
-  color: white;
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.btn:hover {
-  border-color: white;
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* Botón de reproducción especial */
-.btn.play {
-  background: white;
-  color: black;
-  border: none;
-}
-
-.video-info {
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-  margin-top: 4px;
-}
-
-/* Barra de progreso */
-.progress-bar {
-  background: rgba(255, 255, 255, 0.2);
-  height: 4px;
-  border-radius: 2px;
+  background: #181818;
   overflow: hidden;
-}
-
-.progress {
-  background: red;
-  height: 100%;
-  width: 0%; /* se actualiza dinámicamente */
-}
-
-.button-row .btn.arrow {
-  margin-left: auto;
-}
-
-/*VENTANA EMERGENTE DE CADA VIDEO*/
-.expand-info {
-  background-color: #141414;
-  color: white;
-  padding: 1rem;
-  font-size: 14px;
-  border-radius: 0 0 8px 8px;
-  animation: fadeIn 0.3s ease-in-out;
-  margin-top: -4px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  /*transition: all 0.3s ease;*/
+  animation: fadeIn 0.3s ease-out;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: scale(0.95);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: scale(1);
   }
+}
+
+.hover-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.hover-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.left-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Estilo base para todos los botones */
+.btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Botón de reproducción (blanco sólido, ícono negro) */
+.play-button {
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+/* Botones secundarios (transparentes, borde gris, ícono blanco) */
+.icon-button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  transition: background 0.2s ease;
+}
+
+.icon-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hover-buttons button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.hover-buttons button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.hover-info {
+  display: flex;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.badge {
+  background: #333;
+  border-radius: 3px;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.hover-tags {
+  font-size: 12px;
+  padding: 10px;
+  color: #bbb;
+  background: #181818;
+}
+
+/* Habilita la expansión fuera del slide */
+.swiper-slide-wrapper {
+  position: relative;
+  overflow: visible;
+}
+
+/* Corrige el z-index para que flote bien */
+.swiper {
+  overflow: visible !important;
+  position: relative;
+  z-index: 1;
 }

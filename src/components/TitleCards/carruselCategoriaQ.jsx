@@ -7,80 +7,63 @@ import { Navigation } from 'swiper/modules';
 
 const CarruselCategoriaQ = ({ titulo, items, onVideoClick }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [expandedIndex, setExpandedIndex] = useState(null);
 
   return (
     <div className="categoria-carrusel">
       <h2>{titulo}</h2>
       <Swiper
         modules={[Navigation]}
-        spaceBetween={10}
-        slidesPerView={3}
+        spaceBetween={15}
+        slidesPerView={6}
         navigation
         loop={false}
+        breakpoints={{
+          320: { slidesPerView: 2 },
+          640: { slidesPerView: 3 },
+          1024: { slidesPerView: 6 }
+        }}
       >
         {items.map((item, index) => (
           <SwiperSlide key={index}>
-            <div
-              className={`card-video ${hoveredIndex === index ? 'hovered' : ''}`}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              <div className="video-container">
-                <iframe
-                  src={`https://www.youtube.com/embed/${item.youtubeId}?autoplay=${hoveredIndex === index ? 1 : 0}&mute=1&controls=0&loop=1&playlist=${item.youtubeId}`}
-                  title={item.titulo}
-                  frameBorder="0"
-                  allow="autoplay; encrypted-media"
-                  allowFullScreen
-                ></iframe>
-              </div>
-
-              <div className="video-overlay">
-                <div className="button-row">
-                  <button
-                    className="btn play"
-                    onClick={() => onVideoClick && onVideoClick(item)}
-                  >
-                    ▶
-                  </button>
-                  <button className="btn">✓</button>
-                  <button className="btn">👍</button>
-                  <button
-                    className="btn arrow"
-                    onClick={() =>
-                      setExpandedIndex(expandedIndex === index ? null : index)
-                    }
-                  >
-                    ⌄
-                  </button>
+            <div className="swiper-slide-wrapper">
+              <div
+                className="card-netflix-container"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <img
+                  className="thumbnail"
+                  src={item.imagen || `https://img.youtube.com/vi/${item.youtubeId}/hqdefault.jpg`}
+                  alt={item.titulo}
+                />
+                <div className="titulo-overlay">
+                  <span>{item.titulo}</span>
                 </div>
 
-                <div className="video-info">
-                  <span className="episode">M1:E1 «{item.titulo}»</span>
-                  <span className="duration">34 de 78 min</span>
-                </div>
+                {hoveredIndex === index && (
+                  <div className="hover-card">
+                    <img
+                      className="hover-image"
+                      src={item.imagen || `https://img.youtube.com/vi/${item.youtubeId}/hqdefault.jpg`}
+                      alt={item.titulo}
+                    />
+                    <div className="hover-buttons">
+                      <div className="left-buttons">
+                        <button className="btn play-button" onClick={() => onVideoClick && onVideoClick(item)}>▶</button>
+                        <button className="btn icon-button">✔</button>
+                        <button className="btn icon-button">👍</button>
+                      </div>
+                      <button className="btn icon-button">⌄</button> {/* flechita */}
+                    </div>
 
-                <div className="progress-bar">
-                  <div
-                    className="progress"
-                    style={{ width: `${item.progreso || 0}%` }}
-                  ></div>
-                </div>
-
-                {expandedIndex === index && (
-                  <div className="expand-info">
-                    <p>
-                      <strong>Descripción:</strong> Este experimento te enseña
-                      cómo reacciones químicas simples pueden generar efectos
-                      sorprendentes como burbujas inflamables.
-                    </p>
-                    <p>
-                      <strong>Duración:</strong> 2 minutos
-                    </p>
-                    <p>
-                      <strong>Clasificación:</strong> Apto para todo público
-                    </p>
+                    <div className="hover-info">
+                      <span className="badge">13+</span>
+                      <span className="badge">Miniserie</span>
+                      <span className="badge">HD</span>
+                    </div>
+                    <div className="hover-tags">
+                      Inspirador • Conmovedor • Tragicomedia
+                    </div>
                   </div>
                 )}
               </div>
