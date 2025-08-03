@@ -42,7 +42,7 @@ const HeroBannerQuimica = () => {
         <p>Descubre cómo reacciones químicas ocurren en tu entorno.</p>
         <div className="buttons">
           <button className="play" onClick={handlePlay}>▶ Reproducir</button>
-          <button className="info" onClick={handleMoreInfo}>ℹ Más información</button>
+          <button className="info" onClick={handleMoreInfo}>ℹ Más Info</button>
         </div>
       </div>
 

@@ -16,14 +16,16 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(0.4);
+  filter: brightness(0.6);
+   mask-image: linear-gradient(to right, transparent, #060314bb 60%);
+    -webkit-mask-image: linear-gradient(to right, transparent, #060314bb 60%);
 }
 
 /* Contenido principal (izquierda) */
 .overlay-content {
   z-index: 2;
   max-width: 600px;
-  color: white;
+  color: #f5f5f5;
 }
 
 .overlay-content h1 {
@@ -53,13 +55,36 @@
 }
 
 .play {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: black;
+  background-color: #f5f5f5;
+  color: #0d1b2a;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.play:hover {
+  background-color: #ccff00; /* un poco más oscuro que #f5f5f5 */
+  color: #0d1b2a; /* se mantiene */
+}
+
+/* Botón INFO */
 .info {
-  background-color: rgba(109, 109, 110, 0.6);
-  color: white;
+  background-color: #0d1b2a;
+  color: #f5f5f5;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.info:hover {
+  background-color: #1a2c40; /* un poco más claro que #0d1b2a */
+  color: #f5f5f5; /* se mantiene */
 }
 
 /* Botón de sonido en esquina inferior derecha */
