@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .modal-box {
@@ -96,7 +96,7 @@
 }
 
 .play:hover {
-  background-color: #e6e6e6;
+  background-color: #ccff00;
 }
 
 .play-icon {
