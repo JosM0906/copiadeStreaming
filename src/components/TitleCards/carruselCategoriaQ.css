@@ -1,7 +1,7 @@
 .categoria-carrusel {
   padding: 1.5rem;
-  background-color: #141414;
-  color: white;
+  background-color: #0d1b2a;
+  color: #f5f5f5;
   position: relative;
   z-index: 1;
 }
@@ -29,7 +29,7 @@
   bottom: 0;
   width: 100%;
   padding: 0.5rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  background: linear-gradient(to top,  #060314bb 70%, transparent);
   color: white;
   font-size: 0.85rem;
   font-weight: 500;
@@ -40,9 +40,9 @@
   top: -280px;
   left: 0;
   width: 320px;
-  background: #181818;
+  background: #0a1420;
   overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.95);
+  box-shadow: 0 12px 30px  #021a24e9 60%;
   z-index: 9999;
   /*transition: all 0.3s ease;*/
   animation: fadeIn 0.3s ease-out;
