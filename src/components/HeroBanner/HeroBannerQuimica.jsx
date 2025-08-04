@@ -3,6 +3,7 @@ import './HeroBanner.css';
 import videoBg from '../../assets/La Quimica y la vida.mp4';
 import { useNavigate } from 'react-router-dom';
 import Modal from '../../pages/Modal/Modal';
+import tituloQuimica from '../../assets/hero_title_quimica.png';
 
 const HeroBannerQuimica = () => {
   const videoRef = useRef(null);
@@ -38,8 +39,10 @@ const HeroBannerQuimica = () => {
       />
 
       <div className="overlay-content">
-        <h1>Química en la vida diaria</h1>
-        <p>Descubre cómo reacciones químicas ocurren en tu entorno.</p>
+        <img src={tituloQuimica} alt="Química en la vida diaria" className="titulo-img"/>
+        <p>Descubre cómo las reacciones químicas están presentes en cada rincón 
+          de tu entorno: desde la cocina de tu casa hasta los procesos naturales 
+          que sostienen la vida.</p>
         <div className="buttons">
           <button className="play" onClick={handlePlay}>▶ Reproducir</button>
           <button className="info" onClick={handleMoreInfo}>ℹ Más Info</button>
