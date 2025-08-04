@@ -66,6 +66,8 @@
   cursor: pointer;
 }
 
+
+
 .modal-buttons .btn.circle {
   border-radius: 50%;
   padding: 8px 10px;
@@ -94,29 +96,12 @@
 }
 
 /* Botón tipo "Reanudar" */
-.btn.play {
-  background-color: white;
-  color: black;
-  font-weight: 600;
-  padding: 8px 18px;
-  border-radius: 5px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 15px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
 
-.btn.play:hover {
-  background-color: #ccff00;
-}
 
 /* Botones circulares tipo ✓ 👍 ⌄ */
 .btn.circle,
 .btn.arrow {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(3, 25, 55, 0.12);
   color: white;
   border: 2px solid white;
   border-radius: 50%;
@@ -134,4 +119,26 @@
 .btn.circle:hover,
 .btn.arrow:hover {
   background-color: rgba(255, 255, 255, 0.25);
+}
+
+.btn.play {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  min-width: 140px;
+  height: 40px;
+  justify-content: center;
+}
+
+.btn.play:hover {
+  background-color: #ccff00;
 }

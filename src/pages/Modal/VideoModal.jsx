@@ -24,7 +24,7 @@ const VideoModal = ({ video, onClose }) => {
             <h2 className="modal-title">{video.titulo}</h2>
 
             <div className="button-row">
-              <button className="btn play" onClick={() => onVideoClick && onVideoClick(item)}>Reanudar</button>
+              <button className="btn play" onClick={() => onVideoClick && onVideoClick(item)}>Reproducir</button>
               <button className="btn circle">✓</button>
               <button className="btn circle">👍</button>
             </div>

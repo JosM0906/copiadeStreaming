@@ -12,7 +12,7 @@ const Modal = ({ onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-box">
-        <button className="modal-close" onClick={onClose}>✖</button>
+        <button className="modal-close" onClick={onClose}>X</button>
 
         <div className="modal-content">
           <img className="modal-poster" src={poster} alt="Química" />
