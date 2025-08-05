@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import './HeroBanner.css';
+
 import videoBg from '../../assets/Biologia en la vida cotidiana.mp4';
 import { useNavigate } from 'react-router-dom';
 import Modal from '../../pages/Modal/Modal';
