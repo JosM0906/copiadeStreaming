@@ -26,7 +26,7 @@ const Navbar = () => {
 
         {/* Menú normal para pantallas grandes */}
         <ul>
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/home">Home</Link></li>
           <li><Link to="/matematicas">Matemáticas</Link></li>
           <li><Link to="/historia">Historia</Link></li>
           <li><Link to="/biologia">Biología</Link></li>
