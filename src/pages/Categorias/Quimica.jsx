@@ -222,6 +222,47 @@ const Quimica = () => {
   },
 
 ];
+
+const Tabla = [
+  {
+    titulo: 'La tabla',
+    youtubeId: '60go-4haeXw', 
+    progreso: 80,
+    descripcion: 'Datos curiosos de la tabla periodica'
+  },
+  {
+    titulo: 'Propiedades',
+    youtubeId: '2ZO9kBZT8wY',
+    progreso: 90,
+    descripcion: 'Descubre las propiedades de la tabla periodica'
+  },
+   {
+    titulo: 'afinidad electronica',
+    youtubeId: 'YPR7VruMh8s',
+    progreso: 90,
+    descripcion: 'Radio Atómico, Energía de Ionización, Afinidad Electrónica y Electronegatividad | Prop. periódicas'
+  },
+   {
+    titulo: 'Elementos',
+    youtubeId: 'STTySxTMyDU',
+    progreso: 90,
+    descripcion: '¿Cuales son? y como utilizarlos'
+  },
+   {
+    titulo: 'Carbono',
+    youtubeId: '_ytYQsP8Lxc',
+    progreso: 90,
+    descripcion: 'Descbure por que es uno de los elementos de la tabla periodica'
+  },
+   {
+    titulo: 'Historia',
+    youtubeId: 'wdVk8x_wyQA',
+    progreso: 90,
+    descripcion: 'Descubre cual es la historia de la tabla periodia'
+  }
+
+];
+
   console.log('Video seleccionado:', videoSeleccionado);
 
 
@@ -251,6 +292,11 @@ const Quimica = () => {
       <CarruselCategoriaQ 
         titulo="Curiosidades de la quimica" 
         items={Curiosidades}
+        onVideoClick={handleAbrirModal}
+      />
+      <CarruselCategoriaQ 
+        titulo="La tabla periodica" 
+        items={Tabla}
         onVideoClick={handleAbrirModal}
       />
       <VideoModal video={videoSeleccionado} onClose={handleCerrarModal} />
