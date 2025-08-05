@@ -1,5 +1,5 @@
 import React from 'react';
-import './videohistoria.css';
+import './videoquimica.css';
 import videoSrc from '../../assets/Historia en la vida cotidiana.mp4';
 
 
