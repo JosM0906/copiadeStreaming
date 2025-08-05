@@ -3,6 +3,7 @@ import './HeroBanner.css';
 import videoBg from '../../assets/MatematicasEnElMundo.mp4';
 import { useNavigate } from 'react-router-dom';
 import Modal from '../../pages/Modal/ModalM';
+import tituloMate from '../../assets/hero_title-mate.png';
 
 const HeroBannerMate = () => {
   const videoRef = useRef(null);
@@ -38,8 +39,8 @@ const HeroBannerMate = () => {
       />
 
       <div className="overlay-content">
-        <h1>Matemáticas en el mundo real</h1>
-        <p>Descubre cómo los números y las fórmulas explican todo lo que nos rodea.</p>
+        <img src={tituloMate} alt="Matematicas en la vida real" className="titulo-img"/>
+        <p>Descubre cómo los números y las fórmulas revelan los secretos del universo, explicando desde los patrones de la naturaleza hasta las tecnologías que usamos cada día.</p>
         <div className="buttons">
           <button className="play" onClick={handlePlay}>▶ Reproducir</button>
           <button className="info" onClick={handleMoreInfo}>ℹ Más Info</button>

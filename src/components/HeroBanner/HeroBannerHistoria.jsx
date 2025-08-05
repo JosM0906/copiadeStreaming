@@ -3,6 +3,7 @@ import './HeroBanner.css';
 import videoBg from '../../assets/Historia en la vida cotidiana.mp4'; 
 import { useNavigate } from 'react-router-dom';
 import Modal from '../../pages/Modal/ModalH';
+import tituloHistoria from '../../assets/hero_title-historia.png';
 
 const HeroBannerHistoria = () => {
   const videoRef = useRef(null);
@@ -38,8 +39,8 @@ const HeroBannerHistoria = () => {
       />
 
       <div className="overlay-content">
-        <h1>Historia a través del tiempo</h1>
-        <p>Explora los hechos que marcaron el rumbo de la humanidad.</p>
+        <img src={tituloHistoria} alt="Historia a través del tiempo" className="titulo-img"/>
+        <p>Explora los hechos que marcaron el rumbo de la humanidad y comprende cómo cada acontecimiento ha moldeado el mundo en el que vivimos hoy.</p>
         <div className="buttons">
           <button className="play" onClick={handlePlay}>▶ Reproducir</button>
           <button className="info" onClick={handleMoreInfo}>ℹ Más Info</button>

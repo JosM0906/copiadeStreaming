@@ -3,6 +3,7 @@ import './HeroBanner.css';
 import videoBg from '../../assets/programacion.mp4'; 
 import { useNavigate } from 'react-router-dom';
 import Modal from '../../pages/Modal/ModalC';
+import tituloCompu from '../../assets/hero_title-compu.png';
 
 const HeroBannerComputacion = () => {
   const videoRef = useRef(null);
@@ -38,8 +39,8 @@ const HeroBannerComputacion = () => {
       />
 
       <div className="overlay-content">
-        <h1>El mundo de la programación</h1>
-        <p>Conoce los fundamentos para convertirte en un gran programador.</p>
+        <img src={tituloCompu} alt="Fundamentos de la programación" className="titulo-img"/>
+        <p>Conoce los fundamentos esenciales que te permitirán desarrollar tu lógica, crear tus primeros programas y avanzar en el camino para convertirte en un gran programador.</p>
         <div className="buttons">
           <button className="play" onClick={handlePlay}>▶ Reproducir</button>
           <button className="info" onClick={handleMoreInfo}>ℹ Más Info</button>

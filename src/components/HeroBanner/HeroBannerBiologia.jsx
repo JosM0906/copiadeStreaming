@@ -4,6 +4,7 @@ import './HeroBanner.css';
 import videoBg from '../../assets/Biologia en la vida cotidiana.mp4';
 import { useNavigate } from 'react-router-dom';
 import Modal from '../../pages/Modal/ModalB';
+import tituloBio from '../../assets/hero_title-bio.png';
 
 const HeroBannerBiologia = () => {
   const videoRef = useRef(null);
@@ -39,8 +40,8 @@ const HeroBannerBiologia = () => {
       />
 
       <div className="overlay-content">
-        <h1>Biología para la vida</h1>
-        <p>Explora los misterios de los seres vivos y su funcionamiento.</p>
+        <img src={tituloBio} alt="Fundamentos de la programación" className="titulo-img"/>
+        <p>Explora los misterios de los seres vivos y descubre cómo funcionan sus sistemas, desde lo más pequeño como una célula hasta el cuerpo humano en su totalidad.</p>
         <div className="buttons">
           <button className="play" onClick={handlePlay}>▶ Reproducir</button>
           <button className="info" onClick={handleMoreInfo}>ℹ Más Info</button>
