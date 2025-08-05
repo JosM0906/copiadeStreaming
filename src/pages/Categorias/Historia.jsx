@@ -3,6 +3,7 @@ import HeroBanner from '../../components/HeroBanner/HeroBannerHistoria';
 import TitleCards from '../../components/TitleCards/TitleCards';
 import CarruselCategoriaQ from '../../components/TitleCards/carruselCategoriaQ';
 import VideoModal from '../Modal/VideoModal';
+import bannerImg from '../../assets/bannerHistoria.jpg';
 
 const Historia = () => {
   const [videoSeleccionado, setVideoSeleccionado] = useState(null);

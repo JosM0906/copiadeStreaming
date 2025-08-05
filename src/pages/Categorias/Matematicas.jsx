@@ -3,7 +3,7 @@ import HeroBanner from '../../components/HeroBanner/HeroBannerMate';
 import TitleCards from '../../components/TitleCards/TitleCards';
 import CarruselCategoriaQ from '../../components/TitleCards/carruselCategoriaQ';
 import VideoModal from '../Modal/VideoModal';
-
+import bannerImg from '../../assets/bannerMatematicas.jpg';
 
 const Matematicas = () => {
   const [videoSeleccionado, setVideoSeleccionado] = useState(null);

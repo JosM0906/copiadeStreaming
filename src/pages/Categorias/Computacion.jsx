@@ -3,6 +3,8 @@ import HeroBanner from '../../components/HeroBanner/HeroBannerComputacion';
 import TitleCards from '../../components/TitleCards/TitleCards';
 import CarruselCategoriaQ from '../../components/TitleCards/carruselCategoriaQ';
 import VideoModal from '../Modal/VideoModal';
+import bannerImg from '../../assets/bannerComputacion.jpg';
+
 
 
 const Computacion = () => {

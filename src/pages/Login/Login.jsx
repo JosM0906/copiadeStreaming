@@ -10,8 +10,19 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Aquí puedes poner validaciones si quieres, por ahora solo redirige
     navigate('/home');
+  
+  // Simula un usuario permitido
+    const validEmail = 'admin@eduzine.com';
+    const validPassword = '123456';
+
+    if (email === validEmail && password === validPassword) {
+      // Guardar en localStorage como "usuario logueado"
+      localStorage.setItem('auth', 'true');
+      navigate('/home');
+    } else {
+      setError('Correo o contraseña incorrectos');
+    }
   };
 
   return (

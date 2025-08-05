@@ -3,6 +3,7 @@ import HeroBanner from '../../components/HeroBanner/HeroBannerBiologia';
 import TitleCards from '../../components/TitleCards/TitleCards';
 import CarruselCategoriaQ from '../../components/TitleCards/carruselCategoriaQ';
 import VideoModal from '../Modal/VideoModal';
+import bannerImg from '../../assets/bannerBiologia.jpg';
 
 
 const Biologia = () => {
