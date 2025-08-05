@@ -6,7 +6,7 @@
   display: flex;
   align-items: flex-end;
   padding: 60px;
-  padding-left: 7%;
+  padding-left: 3%;
   z-index: 1;
 }
 
@@ -163,7 +163,7 @@
   position: relative;
   z-index: 1;
   padding: 6rem 4rem;
-  max-width: 900px;
+  max-width: 725px;
 }
 
 .overlay-content h1 {
@@ -174,7 +174,8 @@
 }
 
 .overlay-content p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 200;
   margin-bottom: 2rem;
   color: #ccc;
 }
@@ -209,7 +210,7 @@
 }
 
 .buttons .info {
-  background-color: #0f172a;
+  background-color: #090f1c;
   color: #fff;
 }
 

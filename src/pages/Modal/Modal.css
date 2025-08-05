@@ -12,8 +12,8 @@
 }
 
 .modal-box {
-  background-color: #181818;
-  color: white;
+  background-color: #0d1b2a;
+  color: #f5f5f5;
   border-radius: 10px;
   width: 90%;
   max-width: 850px;
@@ -29,7 +29,7 @@
   background: none;
   border: none;
   font-size: 24px;
-  color: white;
+  color: #ccff00;
   cursor: pointer;
 }
 
@@ -91,7 +91,7 @@
   padding: 10px 22px;
   min-width: 140px;
   background-color: white;
-  color: black;
+  color: #0d1b2a;
   font-size: 16px;
   font-weight: bold;
   border: none;
@@ -102,7 +102,7 @@
 
 .modal-buttons .btn.play:hover {
   background-color: #ccff00;
-  color: black;
+  color: #0d1b2a;
 }
 
 /* Botones circulares (＋, ⬇, etc.) */
@@ -112,7 +112,7 @@
   padding: 0;
   font-size: 20px;
   border-radius: 50%;
-  background-color: #0d1b2a;
+  background-color: #26405e;
   color: #ccff00;
   display: flex;
   align-items: center;
@@ -122,5 +122,5 @@
 }
 
 .modal-buttons .btn.circle:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(78, 181, 207, 0.3);
 }
