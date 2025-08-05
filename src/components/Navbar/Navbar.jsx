@@ -32,6 +32,8 @@ const Navbar = () => {
           <li><Link to="/biologia">Biología</Link></li>
           <li><Link to="/computacion">Computación</Link></li>
           <li><Link to="/quimica">Química</Link></li>
+          <li><Link to="/favoritos">Favoritos</Link></li>
+
         </ul>
 
         {/* Menú desplegable en móvil */}
@@ -42,6 +44,7 @@ const Navbar = () => {
           <Link to="/biologia">Biología</Link>
           <Link to="/computacion">Computación</Link>
           <Link to="/quimica">Química</Link>
+          <Link to="/favoritos">Favoritos</Link>
         </div>
       </div>
 

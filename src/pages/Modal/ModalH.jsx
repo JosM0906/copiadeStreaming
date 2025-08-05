@@ -26,7 +26,9 @@ const ModalC = ({ onClose }) => {
                 <span className="play-text">Reproducir</span>
               </button>
 
-              <button className="btn circle">＋</button>
+              <button className="btn circle" onClick={() => agregarAFavoritos(video)}>
+                ＋
+              </button>
               <button className="btn circle"onClick={handlePlay}>⬇</button>
             </div>
 

@@ -25,7 +25,7 @@ const VideoModal = ({ video, onClose }) => {
 
             <div className="button-row">
               <button className="btn play" onClick={() => onVideoClick && onVideoClick(item)}>Reproducir</button>
-              <button className="btn circle">✓</button>
+              <button className="btn circle" onClick={() => agregarAFavoritos(video)}>✓</button>
               <button className="btn circle">👍</button>
             </div>
 
