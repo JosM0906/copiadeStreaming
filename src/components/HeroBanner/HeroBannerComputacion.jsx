@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
 import './HeroBanner.css';
-import videoBg from '../../assets/MatematicasEnElMundo.mp4';
+import videoBg from '../../assets/programacion.mp4'; 
 import { useNavigate } from 'react-router-dom';
 import Modal from '../../pages/Modal/Modal';
 
-const HeroBannerMate = () => {
+const HeroBannerComputacion = () => {
   const videoRef = useRef(null);
   const [muted, setMuted] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,7 +18,7 @@ const HeroBannerMate = () => {
   };
 
   const handlePlay = () => {
-    navigate('/video-matematicas');
+    navigate('/video-computacion'); // Asegúrate de tener esta ruta creada
   };
 
   const handleMoreInfo = () => {
@@ -38,8 +38,8 @@ const HeroBannerMate = () => {
       />
 
       <div className="overlay-content">
-        <h1>Matemáticas en el mundo real</h1>
-        <p>Descubre cómo los números y las fórmulas explican todo lo que nos rodea.</p>
+        <h1>El mundo de la programación</h1>
+        <p>Conoce los fundamentos para convertirte en un gran programador.</p>
         <div className="buttons">
           <button className="play" onClick={handlePlay}>▶ Reproducir</button>
           <button className="info" onClick={handleMoreInfo}>ℹ Más Info</button>
@@ -52,9 +52,10 @@ const HeroBannerMate = () => {
         </button>
       </div>
 
+      {/* Mostrar Modal */}
       {isModalOpen && <Modal onClose={() => setIsModalOpen(false)} />}
     </div>
   );
 };
 
-export default HeroBannerMate;
+export default HeroBannerComputacion;
