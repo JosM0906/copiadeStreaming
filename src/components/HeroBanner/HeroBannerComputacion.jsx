@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import './HeroBanner.css';
 import videoBg from '../../assets/programacion.mp4'; 
 import { useNavigate } from 'react-router-dom';
-import Modal from '../../pages/Modal/Modal';
+import Modal from '../../pages/Modal/ModalC';
 
 const HeroBannerComputacion = () => {
   const videoRef = useRef(null);
@@ -18,7 +18,7 @@ const HeroBannerComputacion = () => {
   };
 
   const handlePlay = () => {
-    navigate('/video-computacion'); // Asegúrate de tener esta ruta creada
+    navigate('/video-computacion'); 
   };
 
   const handleMoreInfo = () => {

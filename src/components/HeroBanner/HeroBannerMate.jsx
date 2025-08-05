@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import './HeroBanner.css';
 import videoBg from '../../assets/MatematicasEnElMundo.mp4';
 import { useNavigate } from 'react-router-dom';
-import Modal from '../../pages/Modal/Modal';
+import Modal from '../../pages/Modal/ModalM';
 
 const HeroBannerMate = () => {
   const videoRef = useRef(null);
