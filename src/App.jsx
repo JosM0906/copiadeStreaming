@@ -1,6 +1,6 @@
 import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+
 import Navbar from './components/Navbar/Navbar';
 import Login from './pages/Login/Login';
 import Home from './pages/Home/Home';
@@ -21,41 +21,46 @@ import VideoBiologia from './pages/Categorias/videobiologia';
 import Computacion from './pages/Categorias/Computacion';
 import VideoComputacion from './pages/Categorias/videocomputacion';
 
-
-const App = () => {
+// Componente para ocultar Navbar si estamos en "/"
+const AppWrapper = () => {
   const location = useLocation();
 
   return (
-    <Router>
-      {/* Oculta la Navbar si estás en la página de Login */}
+    <>
       {location.pathname !== '/' && <Navbar />}
 
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
+
+        {/* Química */}
         <Route path="/quimica" element={<Quimica />} />
         <Route path="/video-quimica" element={<VideoQuimica />} />
-      </Routes>
-      <Routes>
-        <Route path="/" element={<Home />} />
+
+        {/* Historia */}
         <Route path="/historia" element={<Historia />} />
-        <Route path='/video-historia' element={<VideoHistoria/>} />
-      </Routes>
-      <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/video-historia" element={<VideoHistoria />} />
+
+        {/* Matemáticas */}
         <Route path="/matematicas" element={<Matematicas />} />
-        <Route path='/video-matematicas' element={<VideoMatematicas/>} />
-      </Routes>
-      <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/video-matematicas" element={<VideoMatematicas />} />
+
+        {/* Biología */}
         <Route path="/biologia" element={<Biologia />} />
-        <Route path='/video-biologia' element={<VideoBiologia/>} />
-      </Routes>
-      <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/video-biologia" element={<VideoBiologia />} />
+
+        {/* Computación */}
         <Route path="/computacion" element={<Computacion />} />
-        <Route path='/video-computacion' element={<VideoComputacion/>} />
+        <Route path="/video-computacion" element={<VideoComputacion />} />
       </Routes>
+    </>
+  );
+};
+
+const App = () => {
+  return (
+    <Router>
+      <AppWrapper />
     </Router>
   );
 };
