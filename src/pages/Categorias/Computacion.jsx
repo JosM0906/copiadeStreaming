@@ -17,149 +17,275 @@ const Computacion = () => {
 
   const handleCerrarModal = () => setVideoSeleccionado(null);
 
-  const videosIntro = [
+  const arquitectura = [
     {
-      titulo: '¿Qué es la programación?',
-      youtubeId: 'zOjov-2OZ0E',
-      progreso: 80,
-      descripcion: 'Una introducción clara y concisa al mundo de la programación y cómo se usa en la vida diaria.',
+      titulo: 'CURSO DE COMPUTACIÓN BÁSICA',
+      youtubeId: 's_Az3Azecuc',
+      progreso: 45,
+      descripcion: 'CURSO DE COMPUTACIÓN BÁSICA para PRINCIPIANTES. APRENDE A USAR UN COMPUTADOR DESDE CERO.',
     },
     {
-      titulo: '¿Cómo piensa una computadora?',
-      youtubeId: 'Uu2PmmuErlI',
+      titulo: 'El teclado: Partes, Funciones y Formas de Interactuar con el Computador',
+      youtubeId: 'e1YPNz1ePhQ',
+      progreso: 72,
+      descripcion: 'Conoce todos los tipos de teclados y cómo usarlos.'
+    },
+    {
+      titulo: 'FEDERICO HOLIK Y EL FUTURO DE LA COMPUTACIÓN CUÁNTICA',
+      youtubeId: 'k2tLD1fgV0o',
+      progreso: 72,
+      descripcion: '¿Qué diferencia hay entre una computadora común y una cuántica?'
+    },
+    {
+      titulo: '¿Qué es y cómo funciona la COMPUTACIÓN CUÁNTICA?',
+      youtubeId: 'YpYuBEzfRlM',
+      progreso: 72,
+      descripcion: '¿Las CPU cuánticas reemplazarán a las actuales?'
+    },
+    {
+      titulo: 'Informática | HARDWARE y SOFTWARE',
+      youtubeId: 'gVaE2F0jOJs',
+      progreso: 72,
+      descripcion: 'Conceptos clave: hardware y software.'
+    },
+    {
+      titulo: 'CURSO DE COMPUTACION PARA ADULTOS GRATIS',
+      youtubeId: 'jxAgVn73OWg',
+      progreso: 72,
+      descripcion: 'Curso de introducción pensado para adultos.'
+    },
+    {
+      titulo: 'COMO APRENDER COMPUTACION',
+      youtubeId: 'X9aZCAqA-Ps',
+      progreso: 72,
+      descripcion: 'Aprende computación desde cero.'
+    },
+    {
+      titulo: 'La HISTORIA DE LA COMPUTADORA',
+      youtubeId: 'qBoJj6cvH-A',
+      progreso: 72,
+      descripcion: 'Desde los años 40 hasta los superordenadores.'
+    }
+  ];
+
+  const documentales = [
+    {
+      titulo: 'La PRIMERA GENERACIÓN DE COMPUTADORAS',
+      youtubeId: 'DTnJSsO1oEo',
+      progreso: 80,
+      descripcion: 'Origen, hardware y modelos de las primeras computadoras.'
+    },
+    {
+      titulo: 'Potencial y riesgos de un nuevo supercomputador',
+      youtubeId: 'vRCasWrsSiE',
+      progreso: 90,
+      descripcion: 'DW Documental sobre nuevos superordenadores.'
+    },
+    {
+      titulo: 'La Historia de la Computadora y Computación',
+      youtubeId: '7eOKcLnm0Xo',
       progreso: 60,
-      descripcion: 'Explora cómo las computadoras procesan la información mediante instrucciones lógicas.',
+      descripcion: 'Documental completo sobre la evolución tecnológica.'
     },
     {
-      titulo: 'Lenguajes de programación',
-      youtubeId: '4iFALQ1ACdA',
+      titulo: 'Historia de la Computación',
+      youtubeId: 'CLBysCBzJWo',
       progreso: 90,
-      descripcion: 'Conoce los lenguajes más usados en el desarrollo de software actual.',
+      descripcion: 'Documental sobre el desarrollo histórico de la informática.'
     },
+    {
+      titulo: '¿Por qué estaban hechas de bombillas?',
+      youtubeId: 'LvhhcsLrHDw',
+      progreso: 90,
+      descripcion: 'Curiosidades sobre las primeras computadoras.'
+    },
+    {
+      titulo: 'Historia de la INFORMÁTICA',
+      youtubeId: 'wawVLmh3vl8',
+      progreso: 90,
+      descripcion: 'Desde el procesamiento de datos hasta la era digital.'
+    },
+    {
+      titulo: 'La verdad sobre la ciberseguridad',
+      youtubeId: '3FVG_1kNBXA',
+      progreso: 90,
+      descripcion: 'Documental gratuito sobre seguridad digital.'
+    },
+    {
+      titulo: 'La revolución de la IA y la computación cuántica',
+      youtubeId: 'sgJy6dklpUw',
+      progreso: 90,
+      descripcion: 'Impacto de la inteligencia artificial y la computación cuántica.'
+    }
   ];
 
-  const Algoritmos = [
+  const biografias = [
     {
-      titulo: 'Algoritmos en 5 minutos',
-      youtubeId: 'jG3bu0tjF0Y',
-      progreso: 85,
-      descripcion: 'Aprende qué es un algoritmo y cómo se aplica en programación.',
-    },
-    {
-      titulo: 'Pensamiento computacional',
-      youtubeId: 'e7D7EoKRiLQ',
-      progreso: 75,
-      descripcion: 'Desarrolla tu forma de pensar para resolver problemas como un programador.',
-    },
-    {
-      titulo: 'Variables, condiciones y bucles',
-      youtubeId: '9h8j3xiWz6U',
-      progreso: 90,
-      descripcion: 'Conceptos clave para cualquier lenguaje de programación explicados de forma sencilla.',
-    },
-  ];
-
-  const Historia = [
-    {
-      titulo: 'Historia de la computación',
-      youtubeId: 'O5nskjZ_GoI',
-      progreso: 70,
-      descripcion: 'Desde los primeros computadores hasta la era moderna de la programación.',
-    },
-    {
-      titulo: 'Alan Turing y la máquina universal',
-      youtubeId: '4DgG3b_jEw8',
-      progreso: 88,
-      descripcion: 'Descubre al pionero de la ciencia de la computación.',
-    },
-    {
-      titulo: 'Evolución de los lenguajes de programación',
-      youtubeId: 'rqXOy3jMgeI',
+      titulo: 'Personajes olvidados',
+      youtubeId: 'TBC8h10GdB4',
       progreso: 80,
-      descripcion: 'Desde el ensamblador hasta Python y JavaScript.',
-    },
-  ];
-
-  const Curiosidades = [
-    {
-      titulo: 'Errores famosos en código',
-      youtubeId: '7k2HZboF5Fs',
-      progreso: 65,
-      descripcion: 'Conoce los bugs más costosos y curiosos de la historia.',
+      descripcion: 'Sir Clive Sinclair y otros científicos olvidados.'
     },
     {
-      titulo: '¿Por qué usamos 0 y 1?',
-      youtubeId: 'Jo8SKzVslmI',
+      titulo: 'Personajes Históricos',
+      youtubeId: 'I7WNwBhGpg4',
       progreso: 90,
-      descripcion: 'Una explicación simple del sistema binario.',
+      descripcion: 'Los pioneros de la computación.'
     },
     {
-      titulo: 'Las mujeres pioneras en programación',
-      youtubeId: 'rM_s2t4YNsI',
-      progreso: 85,
-      descripcion: 'Conoce a Ada Lovelace, Grace Hopper y otras figuras clave.',
+      titulo: '10 personajes históricos en la computación',
+      youtubeId: '3ZOPr1XDs7c',
+      progreso: 90,
+      descripcion: 'Reseña de los científicos que impulsaron la informática.'
     },
+    {
+      titulo: 'Personajes importantes',
+      youtubeId: 'VXJ5cjV42gM',
+      progreso: 90,
+      descripcion: 'Contribuciones clave en la evolución tecnológica.'
+    },
+    {
+      titulo: 'Personajes olvidados de la historia',
+      youtubeId: 'EzjBvjNQ2uM',
+      progreso: 90,
+      descripcion: 'Personalidades opacadas por la historia.'
+    },
+    {
+      titulo: 'Personajes Importantes de la Informática',
+      youtubeId: 'y0O8DuPLloY',
+      progreso: 90,
+      descripcion: 'Presentación animada de figuras clave.'
+    },
+    {
+      titulo: 'La historia del ordenador',
+      youtubeId: '3KC0GecDd-4',
+      progreso: 90,
+      descripcion: 'La evolución de los ordenadores a través del tiempo.'
+    }
   ];
 
-  const Herramientas = [
+  const curiosidades = [
     {
-      titulo: '¿Qué es Git y para qué sirve?',
-      youtubeId: 'SWYqp7iY_Tc',
-      progreso: 95,
-      descripcion: 'Una guía rápida para comenzar a usar Git en tus proyectos.',
+      titulo: 'Curiosidades del mundo de la informática',
+      youtubeId: 'ncZ8nAkuTmY',
+      progreso: 80,
+      descripcion: 'Datos divertidos para compartir con amigos.'
     },
     {
-      titulo: 'Visual Studio Code',
-      youtubeId: 'VqCgcpAypFQ',
-      progreso: 85,
-      descripcion: 'Aprende cómo configurar tu editor de código favorito.',
+      titulo: '12 Curiosidades Informáticas',
+      youtubeId: 'N3OrHt9-7Eg',
+      progreso: 60,
+      descripcion: 'Descubre lo más sorprendente de la tecnología.'
     },
     {
-      titulo: 'Terminal para principiantes',
-      youtubeId: 'iw8FDDqzT1A',
-      progreso: 75,
-      descripcion: 'Comandos básicos para programadores novatos.',
+      titulo: '10 curiosidades que quizás no conozcas',
+      youtubeId: 'Azc9ksZ2xy4',
+      progreso: 90,
+      descripcion: 'Anécdotas e hitos de la informática.'
     },
+    {
+      titulo: '1 hora de curiosidades de hackers',
+      youtubeId: '_x-I8idHQT0',
+      progreso: 90,
+      descripcion: 'Historias fascinantes del mundo hacker.'
+    },
+    {
+      titulo: '8 Datos curiosos de la informática',
+      youtubeId: 'c_5XZehzn-s',
+      progreso: 90,
+      descripcion: 'Para entretener, informar y ayudar con tareas.'
+    },
+    {
+      titulo: '30 Curiosidades increíbles',
+      youtubeId: 'KvxcYUXNEuQ',
+      progreso: 90,
+      descripcion: 'Una compilación para sorprender.'
+    }
   ];
 
-  console.log('Video seleccionado:', videoSeleccionado);
+  const uso = [
+    {
+      titulo: 'Usos de la computadora',
+      youtubeId: 'bXNE1WnyR9c',
+      progreso: 80,
+      descripcion: 'Experiencias seguras para niños y familias.'
+    },
+    {
+      titulo: 'Clase 3 - Utilidad de la computadora',
+      youtubeId: 'ZGIwHAAeX80',
+      progreso: 90,
+      descripcion: 'Educación básica para niños.'
+    },
+    {
+      titulo: 'Utilidad de la computadora',
+      youtubeId: 'OP52GzromxM',
+      progreso: 90,
+      descripcion: 'Aplicaciones comunes en la vida diaria.'
+    },
+    {
+      titulo: 'Utilidades y Beneficios',
+      youtubeId: '_b_H7gmzBUo',
+      progreso: 90,
+      descripcion: 'Resumen de beneficios principales.'
+    },
+    {
+      titulo: 'Definición y utilidad del computador',
+      youtubeId: 'weAnB1K3bok',
+      progreso: 90,
+      descripcion: 'Importancia del computador.'
+    },
+    {
+      titulo: 'Definición y utilidad del computador',
+      youtubeId: 'weAnB1K3bok',
+      progreso: 90,
+      descripcion: 'Importancia del computador.'
+    }
+    
+    
+  ];
 
   return (
     <div className="categoria-page">
       <HeroBanner
         background={bannerImg}
-        title="Introducción a la Programación"
-        description="Aprende los fundamentos de la computación y cómo empezar a programar."
+        title="Computación en tus manos"
+        description="Descubre cómo la computación está presente en nuestros espacios."
       />
       <TitleCards title="Videos destacados de Computación" category="computacion" />
       <CarruselCategoriaQ 
-        titulo="Conceptos básicos de programación" 
-        items={videosIntro}
+        titulo="Arquitectura de computadoras" 
+        items={arquitectura}
         onVideoClick={handleAbrirModal}
       />
       <CarruselCategoriaQ 
-        titulo="Algoritmos y lógica" 
-        items={Algoritmos}
+        titulo="Documentales" 
+        items={documentales}
         onVideoClick={handleAbrirModal}
       />
       <CarruselCategoriaQ 
-        titulo="Historia de la programación" 
-        items={Historia}
+        titulo="Biografías de Científicos" 
+        items={biografias}
         onVideoClick={handleAbrirModal}
       />
       <CarruselCategoriaQ 
-        titulo="Curiosidades y datos interesantes" 
-        items={Curiosidades}
+        titulo="Curiosidades de la computadora" 
+        items={curiosidades}
         onVideoClick={handleAbrirModal}
       />
       <CarruselCategoriaQ 
-        titulo="Herramientas para programadores" 
-        items={Herramientas}
+        titulo="El uso actual de la computación" 
+        items={uso}
+        onVideoClick={handleAbrirModal}
+      />
+      <CarruselCategoriaQ 
+        titulo="El uso actual de la computación" 
+        items={uso}
         onVideoClick={handleAbrirModal}
       />
       <VideoModal video={videoSeleccionado} onClose={handleCerrarModal} />
     </div>
   );
 };
+
 
 export default Computacion;
