@@ -24,6 +24,8 @@ import VideoComputacion from './pages/Categorias/videocomputacion';
 
 import Favoritos from './pages/Favoritos/Favoritos';
 
+
+
 const AppWrapper = () => {
   const location = useLocation();
 

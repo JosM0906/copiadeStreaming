@@ -18,46 +18,194 @@ const Home = () => {
 
   const handleCerrarModal = () => setVideoSeleccionado(null);
 
-  const videosIntro = [
+  const civilizaciones = [
     {
-      titulo: '¿Qué es la programación?',
-      youtubeId: 'zOjov-2OZ0E',
+      titulo: 'Las ciudades perdidas',
+      youtubeId: 'no3XLXfjk5c', 
       progreso: 80,
-      descripcion: 'Una introducción clara y concisa al mundo de la programación y cómo se usa en la vida diaria.',
+      descripcion: 'Relatos de lugares sorprendentes que existieron.'
     },
     {
-      titulo: '¿Cómo piensa una computadora?',
-      youtubeId: 'Uu2PmmuErlI',
-      progreso: 60,
-      descripcion: 'Explora cómo las computadoras procesan la información mediante instrucciones lógicas.',
-    },
-    {
-      titulo: 'Lenguajes de programación',
-      youtubeId: '4iFALQ1ACdA',
+      titulo: 'Ciudades Perdidas',
+      youtubeId: 'gTfICxk9UQ8',
       progreso: 90,
-      descripcion: 'Conoce los lenguajes más usados en el desarrollo de software actual.',
+      descripcion: 'Ciudades antiguas borradas de la historia.'
     },
+    {
+      titulo: '13 ciudades que fueron enterradas',
+      youtubeId: 'KPMiMGTtg4U',
+      progreso: 90,
+      descripcion: 'Vestigios de civilizaciones antiguas.'
+    },
+    {
+      titulo: '10 ciudades perdidas',
+      youtubeId: 'cTQVPRuos2s',
+      progreso: 90,
+      descripcion: 'Misteriosas ciudades ocultas por el tiempo.'
+    },
+    {
+      titulo: 'La urbanización',
+      youtubeId: 'dYYL9SrzEuM',
+      progreso: 90,
+      descripcion: 'Los inicios de las primeras aldeas humanas.'
+    },
+    {
+      titulo: 'Secretos de la Ciudad Maya',
+      youtubeId: 'l2BKZ-AqO8I',
+      progreso: 90,
+      descripcion: 'Exploración profunda del mundo maya.'
+    }
   ];
 
-  const algoritmos = [
+  const videosQuimica = [
     {
-      titulo: 'Algoritmos en 5 minutos',
-      youtubeId: 'jG3bu0tjF0Y',
-      progreso: 85,
-      descripcion: 'Aprende qué es un algoritmo y cómo se aplica en programación.',
+      titulo: 'Reacciones en casa',
+      youtubeId: 'gyXfzgpM0A4',
+      progreso: 45,
+      descripcion: 'Este experimento te enseña cómo reacciones químicas simples pueden generar efectos sorprendentes como burbujas inflamables.',
     },
     {
-      titulo: 'Pensamiento computacional',
-      youtubeId: 'e7D7EoKRiLQ',
-      progreso: 75,
-      descripcion: 'Desarrolla tu forma de pensar para resolver problemas como un programador.',
+      titulo: 'Experimento con fuego',
+      youtubeId: 'QZq1KU8-pB4', 
+      progreso: 72,
+      descripcion: 'Una reacción controlada con fuego para estudiar combustión.'
     },
     {
-      titulo: 'Variables, condiciones y bucles',
-      youtubeId: '9h8j3xiWz6U',
-      progreso: 90,
-      descripcion: 'Conceptos clave para cualquier lenguaje de programación explicados de forma sencilla.',
+      titulo: 'Reacciones de cambio',
+      youtubeId: 'PZLN8SWEOhQ', 
+      progreso: 72,
+      descripcion: 'Ve como puedes hacer reacciones con cambios de color'
     },
+    {
+      titulo: 'Oxigeno en el aire',
+      youtubeId: 'BNUH28WERSk', 
+      progreso: 72,
+      descripcion: 'Descubre como puedes ver Porcentajes de Oxigeno en el aire'
+    },
+    {
+      titulo: 'Globo con vinagre',
+      youtubeId: '0gDQcTVjyhs', 
+      progreso: 72,
+      descripcion: 'Experimento de como inflar un globo con vinagre y cascara de huevo'
+    },
+    {
+      titulo: 'Velocidades',
+      youtubeId: 'ExH_YRfYToI', 
+      progreso: 72,
+      descripcion: 'Descubre la velocidad de una reaccion química'
+    },
+    {
+      titulo: 'Airbag',
+      youtubeId: '0kj1OJcXJIQ', 
+      progreso: 72,
+      descripcion: 'Descubre como es un airbag casero.'
+    },
+    {
+      titulo: 'Huebo que bota',
+      youtubeId: 'hOGEn0r5MHE', 
+      progreso: 72,
+      descripcion: 'Descubre como formar un huevo que bota'
+    }
+  ];
+  const culturaPop = [
+    {
+      titulo: 'Una mente brillante',
+      youtubeId: 'h_B16qD89aM',
+      progreso: 30,
+      descripcion: 'John Nash revoluciona la teoría de juegos mientras lucha contra la esquizofrenia.',
+    },
+    {
+      titulo: 'El hombre que conocía el infinito',
+      youtubeId: 'Q3bTBAlIZDs',
+      progreso: 72,
+      descripcion: 'Historia de Ramanujan, genio indio autodidacta.'
+    },
+    {
+      titulo: 'Figuras ocultas',
+      youtubeId: 'E4j_LpKzcZQ',
+      progreso: 72,
+      descripcion: 'Matemáticas afroamericanas en la NASA.'
+    },
+    {
+      titulo: 'La teoría del todo',
+      youtubeId: 'iO6h9XFzPGU',
+      progreso: 72,
+      descripcion: 'Stephen Hawking y su búsqueda por una fórmula del universo.'
+    },
+    {
+      titulo: 'Moneyball',
+      youtubeId: 'PwfrGbvxuzM',
+      progreso: 72,
+      descripcion: 'Beisbol y estadística aplicada.'
+    },
+    {
+      titulo: 'Cube (1997)',
+      youtubeId: 'rZgXB2A9qnI',
+      progreso: 72,
+      descripcion: 'Escape matemático de un cubo mortal.'
+    },
+    {
+      titulo: '21: Blackjack',
+      youtubeId: 'Z-I3XvabNvM',
+      progreso: 72,
+      descripcion: 'Estudiantes del MIT usan matemáticas para contar cartas.'
+    },
+    {
+      titulo: 'The Imitation Game',
+      youtubeId: 'Tr4DmyjDXes',
+      progreso: 72,
+      descripcion: 'Alan Turing descifra códigos nazis.'
+    }
+  ];
+  const arquitectura = [
+    {
+      titulo: 'CURSO DE COMPUTACIÓN BÁSICA',
+      youtubeId: 's_Az3Azecuc',
+      progreso: 45,
+      descripcion: 'CURSO DE COMPUTACIÓN BÁSICA para PRINCIPIANTES. APRENDE A USAR UN COMPUTADOR DESDE CERO.',
+    },
+    {
+      titulo: 'El teclado: Partes, Funciones y Formas de Interactuar con el Computador',
+      youtubeId: 'e1YPNz1ePhQ',
+      progreso: 72,
+      descripcion: 'Conoce todos los tipos de teclados y cómo usarlos.'
+    },
+    {
+      titulo: 'FEDERICO HOLIK Y EL FUTURO DE LA COMPUTACIÓN CUÁNTICA',
+      youtubeId: 'k2tLD1fgV0o',
+      progreso: 72,
+      descripcion: '¿Qué diferencia hay entre una computadora común y una cuántica?'
+    },
+    {
+      titulo: '¿Qué es y cómo funciona la COMPUTACIÓN CUÁNTICA?',
+      youtubeId: 'YpYuBEzfRlM',
+      progreso: 72,
+      descripcion: '¿Las CPU cuánticas reemplazarán a las actuales?'
+    },
+    {
+      titulo: 'Informática | HARDWARE y SOFTWARE',
+      youtubeId: 'gVaE2F0jOJs',
+      progreso: 72,
+      descripcion: 'Conceptos clave: hardware y software.'
+    },
+    {
+      titulo: 'CURSO DE COMPUTACION PARA ADULTOS GRATIS',
+      youtubeId: 'jxAgVn73OWg',
+      progreso: 72,
+      descripcion: 'Curso de introducción pensado para adultos.'
+    },
+    {
+      titulo: 'COMO APRENDER COMPUTACION',
+      youtubeId: 'X9aZCAqA-Ps',
+      progreso: 72,
+      descripcion: 'Aprende computación desde cero.'
+    },
+    {
+      titulo: 'La HISTORIA DE LA COMPUTADORA',
+      youtubeId: 'qBoJj6cvH-A',
+      progreso: 72,
+      descripcion: 'Desde los años 40 hasta los superordenadores.'
+    }
   ];
 
   return (
@@ -83,16 +231,26 @@ const Home = () => {
 
       {/* Carruseles debajo del Hero */}
       <div className="home-content">
+         <CarruselCategoriaQ 
+        titulo="Civilizaciones antiguas" 
+        items={civilizaciones}
+        onVideoClick={handleAbrirModal}
+      />
         <CarruselCategoriaQ 
-          titulo="Conceptos básicos de programación" 
-          items={videosIntro} 
-          onVideoClick={handleAbrirModal} 
-        />
-        <CarruselCategoriaQ 
-          titulo="Algoritmos y lógica" 
-          items={algoritmos} 
-          onVideoClick={handleAbrirModal} 
-        />
+        titulo="Experimentos de Química" 
+        items={videosQuimica}
+        onVideoClick={handleAbrirModal}
+      />
+      <CarruselCategoriaQ 
+        titulo="Matemáticas en el Cine y la Cultura Pop" 
+        items={culturaPop}
+        onVideoClick={handleAbrirModal}
+      />
+      <CarruselCategoriaQ 
+        titulo="Arquitectura de computadoras" 
+        items={arquitectura}
+        onVideoClick={handleAbrirModal}
+      />
       </div>
 
       <VideoModal video={videoSeleccionado} onClose={handleCerrarModal} />
