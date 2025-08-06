@@ -22,9 +22,11 @@ import VideoBiologia from './pages/Categorias/videobiologia';
 import Computacion from './pages/Categorias/Computacion';
 import VideoComputacion from './pages/Categorias/videocomputacion';
 
+// FAVORITOS
 import Favoritos from './pages/Favoritos/Favoritos';
 
-
+// BUSQUEDA
+import Busqueda from './pages/Busqueda/Busqueda'; 
 
 const AppWrapper = () => {
   const location = useLocation();
@@ -56,6 +58,9 @@ const AppWrapper = () => {
 
         {/* Ruta de favoritos */}
         <Route path="/favoritos" element={<Favoritos />} />
+
+        {/* Ruta de búsqueda */}
+        <Route path="/busqueda" element={<Busqueda />} />
       </Routes>
     </>
   );
