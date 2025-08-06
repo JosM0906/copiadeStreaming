@@ -1,4 +1,3 @@
-// App.jsx
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 
@@ -61,6 +60,7 @@ const AppWrapper = () => {
 
         {/* Ruta de búsqueda */}
         <Route path="/busqueda" element={<Busqueda />} />
+
       </Routes>
     </>
   );

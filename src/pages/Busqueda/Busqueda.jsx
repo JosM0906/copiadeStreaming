@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from '../../components/Navbar/Navbar';
+import { useSearchParams } from 'react-router-dom';
 import CarruselCategoriaQ from '../../components/TitleCards/carruselCategoriaQ';
 import VideoModal from '../Modal/VideoModal';
 import { todosLosVideos } from './todosLosVideos';
 
-// 👉 Función para eliminar tildes y hacer minúscula
+// Función para eliminar tildes y hacer lowercase
 const normalizar = (texto) =>
   texto.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 
 const Busqueda = () => {
-  const [query, setQuery] = useState('');
+  const [searchParams] = useSearchParams();
   const [resultados, setResultados] = useState([]);
   const [videoSeleccionado, setVideoSeleccionado] = useState(null);
 
-  const handleChange = (e) => setQuery(e.target.value);
+  const query = searchParams.get('query') || '';
+
   const handleAbrirModal = (video) => setVideoSeleccionado(video);
   const handleCerrarModal = () => setVideoSeleccionado(null);
 
@@ -32,30 +33,19 @@ const Busqueda = () => {
   }, [query]);
 
   return (
-    <div className="categoria-page" style={{ paddingTop: '100px' }}>
-      <Navbar />
-      <h1 style={{ color: 'white', marginLeft: '2rem' }}>Buscar contenido educativo</h1>
-
-      <div style={{ margin: '2rem' }}>
-        <input
-          type="text"
-          placeholder="Escribe una palabra clave..."
-          value={query}
-          onChange={handleChange}
-          style={{
-            padding: '10px',
-            width: '100%',
-            maxWidth: '600px',
-            fontSize: '1.1rem',
-            borderRadius: '8px',
-            border: 'none'
-          }}
-        />
+    <div className="categoria-page" style={{ paddingTop: '60px', paddingBottom: '40px' }}>
+      {/* Título */}
+      <div style={{ marginLeft: '2rem', marginBottom: '1rem' }}>
+        <h1 style={{ color: 'white' }}>Videos encontrados</h1>
+        <h3 style={{ color: '#ccc', fontWeight: 'normal' }}>
+          Resultados para: <em>"{query}"</em>
+        </h3>
       </div>
 
+      {/* Resultados */}
       {resultados.length > 0 ? (
         <CarruselCategoriaQ
-          titulo={`Resultados para: "${query}"`}
+          titulo=""
           items={resultados}
           onVideoClick={handleAbrirModal}
         />
@@ -67,6 +57,7 @@ const Busqueda = () => {
         )
       )}
 
+      {/* Modal de video */}
       <VideoModal video={videoSeleccionado} onClose={handleCerrarModal} />
     </div>
   );

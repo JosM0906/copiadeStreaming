@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 import logo from '../../assets/logo.png';
@@ -13,12 +13,22 @@ const Navbar = () => {
   const [mostrarBuscador, setMostrarBuscador] = useState(false);
   const [terminoBusqueda, setTerminoBusqueda] = useState('');
 
+  const navigate = useNavigate();
+
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
   const toggleBuscador = () => {
     setMostrarBuscador(!mostrarBuscador);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && terminoBusqueda.trim()) {
+      navigate(`/busqueda?query=${encodeURIComponent(terminoBusqueda)}`);
+      setTerminoBusqueda('');
+      setMostrarBuscador(false);
+    }
   };
 
   return (
@@ -49,7 +59,7 @@ const Navbar = () => {
 
       {/* Sección derecha */}
       <div className="navbar-right">
-        {/* LUPA */}
+        {/* Lupa */}
         <img
           src={search_icon}
           alt="Buscar"
@@ -58,7 +68,7 @@ const Navbar = () => {
           style={{ cursor: 'pointer' }}
         />
 
-        {/* Input de búsqueda (visible solo si mostrarBuscador es true) */}
+        {/* Input de búsqueda */}
         {mostrarBuscador && (
           <input
             type="text"
@@ -66,6 +76,7 @@ const Navbar = () => {
             placeholder="Buscar..."
             value={terminoBusqueda}
             onChange={(e) => setTerminoBusqueda(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
         )}
 
