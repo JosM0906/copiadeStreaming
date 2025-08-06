@@ -1,22 +1,31 @@
+// Importa React y el hook useState para manejar el estado del componente
 import React, { useState } from 'react';
+// Importa el banner específico para la sección de Computación
 import HeroBanner from '../../components/HeroBanner/HeroBannerComputacion';
+// Importa el componente que muestra el título y estilo de tarjetas
 import TitleCards from '../../components/TitleCards/TitleCards';
+// Importa el carrusel reutilizable para mostrar listas de videos
 import CarruselCategoriaQ from '../../components/TitleCards/carruselCategoriaQ';
+// Importa el componente de ventana emergente (modal) para mostrar los videos
 import VideoModal from '../Modal/VideoModal';
+// Importa la imagen de fondo para el banner de Computación
 import bannerImg from '../../assets/bannerComputacion.jpg';
 
 
-
+// Componente principal de la sección de Computación
 const Computacion = () => {
+  // Estado que guarda el video actualmente seleccionado para mostrar en el modal
   const [videoSeleccionado, setVideoSeleccionado] = useState(null);
-
+  // Función que se ejecuta cuando el usuario hace clic en un video
+  // Guarda el video clickeado en el estado y lo muestra en el modal
   const handleAbrirModal = (video) => {
-    console.log('Video clickeado:', video); // depuración
+    console.log('Video clickeado:', video); // Mensaje de depuración para la consola
     setVideoSeleccionado(video);
   };
-
+  // Función que cierra el modal al limpiar el video seleccionado
   const handleCerrarModal = () => setVideoSeleccionado(null);
-
+  
+// Lista de videos educativos generales de computacion
   const arquitectura = [
     {
       titulo: 'CURSO DE COMPUTACIÓN BÁSICA',
@@ -245,6 +254,7 @@ const Computacion = () => {
   ];
 
   return (
+    // Contenedor principal de toda la sección de Computacion
     <div className="categoria-page">
       <HeroBanner
         background={bannerImg}
@@ -287,5 +297,5 @@ const Computacion = () => {
   );
 };
 
-
+// Exporta el componente para que pueda ser utilizado en otras partes del proyecto
 export default Computacion;

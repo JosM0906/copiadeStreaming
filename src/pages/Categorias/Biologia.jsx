@@ -1,21 +1,31 @@
+// Importa React y el hook useState para manejar estados locales
 import React, { useState } from 'react';
+
+// Importa componentes personalizados que se usarán en esta página
 import HeroBanner from '../../components/HeroBanner/HeroBannerBiologia';
 import TitleCards from '../../components/TitleCards/TitleCards';
 import CarruselCategoriaQ from '../../components/TitleCards/carruselCategoriaQ';
 import VideoModal from '../Modal/VideoModal';
+
+// Importa la imagen del banner para la sección de biología
 import bannerImg from '../../assets/bannerBiologia.jpg';
 
-
+// Componente principal para la sección de Biología
 const Biologia = () => {
+  // Estado para guardar el video que ha sido seleccionado por el usuario
   const [videoSeleccionado, setVideoSeleccionado] = useState(null);
 
+  // Función que se ejecuta al hacer clic en un video, abre el modal
   const handleAbrirModal = (video) => {
     console.log('Video clickeado:', video); // depuración
     setVideoSeleccionado(video);
-  };;
+  };
 
+  // Función que cierra el modal
   const handleCerrarModal = () => setVideoSeleccionado(null);
 
+  
+  // Lista de videos educativos generales de biología
   const videosBiologia = [
     {
       titulo: 'Aprendiendo Biologia Desde Cero',
@@ -260,6 +270,7 @@ const Biologia = () => {
   ];
 
   return (
+    // Contenedor principal de toda la sección de Biología
     <div className="categoria-page">
       <HeroBanner
         background={bannerImg}
@@ -296,5 +307,5 @@ const Biologia = () => {
     </div>
   );
 };
-
+// Exporta el componente para que pueda ser utilizado en otras partes del proyecto
 export default Biologia;

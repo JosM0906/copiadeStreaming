@@ -1,21 +1,30 @@
+// Importa React y el hook useState para manejar el estado del componente
 import React, { useState } from 'react';
+// Importa el banner personalizado para la sección de Historia
 import HeroBanner from '../../components/HeroBanner/HeroBannerHistoria';
+// Importa el componente de títulos en formato de tarjetas
 import TitleCards from '../../components/TitleCards/TitleCards';
+// Importa el carrusel de videos reutilizable para mostrar diferentes categorías
 import CarruselCategoriaQ from '../../components/TitleCards/carruselCategoriaQ';
+// Importa el componente modal para mostrar videos en pantalla emergente
 import VideoModal from '../Modal/VideoModal';
+// Importa la imagen de fondo para el banner de Historia
 import bannerImg from '../../assets/bannerHistoria.jpg';
-
+// Componente principal para la sección de Historia
 const Historia = () => {
+  // Estado que almacena el video seleccionado para mostrarse en el modal
   const [videoSeleccionado, setVideoSeleccionado] = useState(null);
-
+  // Función que se ejecuta al hacer clic en un video del carrusel
+  // Actualiza el estado con el video seleccionado
   const handleAbrirModal = (video) => {
     setVideoSeleccionado(video);
   };
-
+  // Función que cierra el modal al limpiar el estado del video seleccionado
   const handleCerrarModal = () => setVideoSeleccionado(null);
-
   // Reasignar nombres a tus arrays de video
+
   const guerras = [
+    // Lista de videos educativos generales de historia
     {
       titulo: 'Los Judíos volverán a su tierra',
       youtubeId: 'nRBgwrjV6Wc',
